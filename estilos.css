@@ -1,0 +1,290 @@
+body {
+    height: 1026px; 
+    width: 414px;
+
+    font-family: 'Righteous', cursive;
+    font-family: 'Roboto', sans-serif;
+    background: #E5E5E5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.topo {
+    width: 414px;
+    height: 92px;
+    padding: 12px 0 0 21px;
+    
+    position: fixed;
+    left: 0px;
+    top: 0px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.topo h1 {
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 44px;
+    letter-spacing: -0.012em;
+
+    color: #FFFFFF;
+
+    padding: 0;
+}
+
+span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    color: #FFFFFF;
+}
+
+.corpo {
+    width: 414px; 
+    padding: 123px 0 108px;
+}
+
+.prato, .bebida, .sobremesa {
+    display: flex;
+    overflow-x:scroll
+}
+
+h1 {
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    letter-spacing: 0.018em;
+
+    color: #333333;
+
+    padding: 23px 0 13px 19px;
+}
+
+h1:first-child {
+    padding-top: 0px;
+}
+
+button {
+    border: none;
+}
+
+.selPrato, .selBebida, .selSobremesa { 
+    margin-left: 16px;
+    padding: 18px 14px 13px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+
+    cursor: pointer;
+}
+
+.pratoSelecionado, .bebidaSelecionado, .sobremesaSelecionado {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+}
+
+.selPrato {
+    height: 217px;
+}
+
+.selBebida  {
+    height: 202px;
+}
+
+.selSobremesa{
+    height: 197px;
+}
+
+img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+    padding-bottom: 8px;
+}
+
+.sobremesa img {
+    height: 82px;
+}
+
+.titulo {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #333333;
+}
+
+.descricao {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #A6A6A6;
+}
+
+.valor {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+.base {
+    position: fixed;
+    width: 414px;
+    height: 92px;
+    left: 0px;
+    bottom: 0px;
+
+    background: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao {
+    width: 364px;
+    height: 61px;
+    padding: 0 70px;
+
+    background: #CBCBCB;
+    border-radius: 50px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.018em;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.botaoAtivo {
+    background-color: #32B72F;
+}
+
+.escondido {
+    display: none;
+}
+
+.confirmarPedido {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    z-index: 9999;
+}
+
+.confirmacao {
+    height: 353px;  
+    width: 377px;
+
+    position: absolute;
+    top: 336px;
+    left: 20px;
+
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.confC {
+    margin-top: 21px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+}
+
+.C {
+    height: 200px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    
+}
+
+.pratoC, .bebidaC, .sobremesaC, .totalC {
+    height: 27px;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 26px;
+}
+
+.botaoC {
+    width: 329px;
+    height: 52px;
+    border-radius: 100px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+
+    margin: 0 auto;
+
+    cursor: pointer;
+}
+ 
+.botaoC span {
+    color: #50D074;
+ }
+
+ .cancelar {
+    height: 52px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.018em;
+    
+    color: #FFFFFF;
+
+    text-align: center;
+
+    padding-top: 16px;
+ }

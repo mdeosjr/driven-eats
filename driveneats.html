@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <title>DrivenEats</title>
+</head>
+
+<body>
+    <div class="confirmarPedido escondido">
+        <div class="confirmacao">
+            <span class="confC">Confirme seu pedido</span>
+            <div class="C">
+                <div class="pratoC">
+                    <span class="pratoEscolhido">Comida</span>
+                    <span class="valorPrato"></span>
+                </div>
+                <div class="bebidaC">
+                    <span class="bebidaEscolhida">Bebida</span>
+                    <span class="valorBebida"></span>
+                </div>
+                <div class="sobremesaC">
+                    <span class="sobremesaEscolhida">Sobremesa</span>
+                    <span class="valorSobremesa"></span>
+                </div>
+                <div class="totalC">
+                    <span>Total</span>
+                    <span class="valorTotal"></span>
+                </div>
+            </div>
+            <button class="botaoC" onclick="enviarPedido()">
+                <span>Tudo certo, pode pedir!</span>
+            </button>
+            <div class="cancelar">Cancelar</div>
+        </div>
+    </div>
+    <div class="topo">
+        <h1>DrivenEats</h1>
+        <span>Sua comida em 6 minutos</span>
+    </div>
+    <div class="corpo">
+        
+        <h1 class="primeiro">Primeiro, seu prato</h1>
+        <div class="prato">
+            <button class="selPrato" onclick="pratoSelecionada(this)">
+                <div class="foto">
+                    <img src="assets/frango_yin_yang 1.png">
+                </div>
+                <div class="titulo">
+                    Frango Yin Yang
+                </div>
+                <div class="descricao">
+                    Batata e salada
+                </div>
+                <div class="valor">
+                    14.90
+                </div>
+            </button>
+
+            <button class="selPrato" onclick="pratoSelecionada(this)">
+                <div class="foto">
+                    <img src="assets/frango_yin_yang 1.png">
+                </div>
+                <div class="titulo">
+                    Frango 
+                </div>
+                <div class="descricao">
+                    Batata e salada
+                </div>
+                <div class="valor">
+                    14.90
+                </div>
+            </button>
+
+            <button class="selPrato" onclick="pratoSelecionada(this)">
+                <div class="foto">
+                    <img src="assets/frango_yin_yang 1.png">
+                </div>
+                <div class="titulo">
+                    Frango 3
+                </div>
+                <div class="descricao">
+                    Batata e salada
+                </div>
+                <div class="valor">
+                    14.90
+                </div>
+            </button>
+        </div>
+        
+        <h1>Agora, sua bebida</h1>
+        <div class="bebida">
+            <button class="selBebida" onclick="bebidaSelecionada(this)">
+                    <div class="foto">
+                        <img src="assets/coquinha_gelada 1.png">
+                    </div>
+                    <div class="titulo">
+                        Coquinha 
+                    </div>
+                    <div class="descricao">
+                        Lata 350 mL
+                    </div>
+                    <div class="valor">
+                        4.90
+                    </div>
+            </button>
+    
+            <button class="selBebida" onclick="bebidaSelecionada(this)">
+                    <div class="foto">
+                        <img src="assets/coquinha_gelada 1.png">
+                    </div>
+                    <div class="titulo">
+                        Coquinha 2
+                    </div>
+                    <div class="descricao">
+                        Lata 350 mL
+                    </div>
+                    <div class="valor">
+                        4.90
+                    </div>
+            </button>
+    
+            <button class="selBebida" onclick="bebidaSelecionada(this)">
+                    <div class="foto">
+                        <img src="assets/coquinha_gelada 1.png">
+                    </div>
+                    <div class="titulo">
+                        Coquinha 3
+                    </div>
+                    <div class="descricao">
+                        Lata 350 mL
+                    </div>
+                    <div class="valor">
+                        4.90
+                    </div>
+            </button>
+        </div>
+        
+        <h1>Por fim, sua sobremesa</h1>
+        <div class="sobremesa">
+            <button class="selSobremesa" onclick="sobremesaSelecionada(this)">
+                    <div class="foto">
+                        <img src="assets/pudim 1.png">
+                    </div>
+                    <div class="titulo">
+                        Pudim 1
+                    </div>
+                    <div class="descricao">
+                        Apenas pudim
+                    </div>
+                    <div class="valor">
+                        7.90
+                    </div>
+            </button>
+    
+            <button class="selSobremesa" onclick="sobremesaSelecionada(this)">
+                    <div class="foto">
+                        <img src="assets/pudim 1.png">
+                    </div>
+                    <div class="titulo">
+                        Pudim 2
+                    </div>
+                    <div class="descricao">
+                        Apenas pudim
+                    </div>
+                    <div class="valor">
+                        7.90
+                    </div>
+            </button>
+    
+            <button class="selSobremesa" onclick="sobremesaSelecionada(this)">
+                    <div class="foto">
+                        <img src="assets/pudim 1.png">
+                    </div>
+                    <div class="titulo">
+                        Pudim 3
+                    </div>
+                    <div class="descricao">
+                        Apenas pudim
+                    </div>
+                    <div class="valor">
+                        7.90
+                    </div>
+            </button> 
+        </div>
+
+    </div>
+    <div class="base">
+        <button disabled="disabled" class="botao confirmado" onclick="confirmarPedido()">
+            Selecione os 3 itens para fechar o pedido
+        </button>
+    </div>
+    <script src="driveneats.js"></script>
+</body>
+</html>
