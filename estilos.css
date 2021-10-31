@@ -19,6 +19,7 @@ body {
     position: fixed;
     left: 0px;
     top: 0px;
+    z-index: 9999;
 
     display: flex;
     flex-direction: column;
@@ -88,7 +89,7 @@ button {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     box-sizing: border-box;
 
     cursor: pointer;
@@ -99,15 +100,34 @@ button {
 }
 
 .selPrato {
+    position: relative;
     height: 217px;
 }
 
 .selBebida  {
+    position: relative;
     height: 202px;
 }
 
 .selSobremesa{
+    position: relative;
     height: 197px;
+}
+
+.checked {
+    display: none;
+
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+
+    width: 20px;
+    height: 20px;
+    color:#32B72F;
+}
+
+.pratoSelecionado .checked, .bebidaSelecionado .checked, .sobremesaSelecionado .checked {
+    display: initial;
 }
 
 img {
@@ -142,6 +162,7 @@ img {
 }
 
 .valor {
+    width: 100%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -149,6 +170,15 @@ img {
     line-height: 19px;
 
     color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.valor ion-icon {
+    width: 20px;
+    height: 20px;
+    color: #32B72F;
+    display: none;
 }
 
 .base {
@@ -234,15 +264,26 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-    
 }
 
-.pratoC, .bebidaC, .sobremesaC, .totalC {
+.pratoC, .bebidaC, .sobremesaC {
     height: 27px;
 
     font-style: normal;
     font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 26px;
+}
+
+.totalC {
+    font-style: normal;
+    font-weight: bold;
     font-size: 22px;
     line-height: 26px;
     letter-spacing: 0.018em;
@@ -287,4 +328,6 @@ img {
     text-align: center;
 
     padding-top: 16px;
+
+    cursor: pointer;
  }

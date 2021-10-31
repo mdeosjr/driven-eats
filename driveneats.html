@@ -30,14 +30,14 @@
                     <span class="valorSobremesa"></span>
                 </div>
                 <div class="totalC">
-                    <span>Total</span>
+                    <span>TOTAL</span>
                     <span class="valorTotal"></span>
                 </div>
             </div>
             <button class="botaoC" onclick="enviarPedido()">
                 <span>Tudo certo, pode pedir!</span>
             </button>
-            <div class="cancelar">Cancelar</div>
+            <div class="cancelar" onclick="cancelarPedido()">Cancelar</div>
         </div>
     </div>
     <div class="topo">
@@ -50,47 +50,50 @@
         <div class="prato">
             <button class="selPrato" onclick="pratoSelecionada(this)">
                 <div class="foto">
-                    <img src="assets/frango_yin_yang 1.png">
+                    <img src="assets/frango.png">
                 </div>
                 <div class="titulo">
-                    Frango Yin Yang
+                    Frango com aipim
                 </div>
                 <div class="descricao">
-                    Batata e salada
+                    Frango e aipim frito
                 </div>
                 <div class="valor">
-                    14.90
+                    35.90
                 </div>
+                <ion-icon name="checkmark-circle-sharp" class="checked"></ion-icon>
             </button>
 
             <button class="selPrato" onclick="pratoSelecionada(this)">
                 <div class="foto">
-                    <img src="assets/frango_yin_yang 1.png">
+                    <img src="assets/costela.jpg">
                 </div>
                 <div class="titulo">
-                    Frango 
+                    Costela assada 
                 </div>
                 <div class="descricao">
-                    Batata e salada
+                    Costela e barbecue
                 </div>
                 <div class="valor">
-                    14.90
+                    44.90
                 </div>
+                <ion-icon name="checkmark-circle-sharp" class="checked checkmark"></ion-icon>
             </button>
 
             <button class="selPrato" onclick="pratoSelecionada(this)">
                 <div class="foto">
-                    <img src="assets/frango_yin_yang 1.png">
+                    <img src="assets/parmegiana.png">
                 </div>
                 <div class="titulo">
-                    Frango 3
+                    Frango parmegiana
                 </div>
                 <div class="descricao">
-                    Batata e salada
+                    Frango, arroz e fritas
                 </div>
                 <div class="valor">
-                    14.90
+                    24.90
                 </div>
+                <ion-icon name="checkmark-circle-sharp" class="checked checkmark"></ion-icon>
             </button>
         </div>
         
@@ -98,17 +101,34 @@
         <div class="bebida">
             <button class="selBebida" onclick="bebidaSelecionada(this)">
                     <div class="foto">
-                        <img src="assets/coquinha_gelada 1.png">
+                        <img src="assets/agua.jpg">
                     </div>
                     <div class="titulo">
-                        Coquinha 
+                        Água 
                     </div>
                     <div class="descricao">
-                        Lata 350 mL
+                        Garrafa 400mL
                     </div>
                     <div class="valor">
-                        4.90
+                        3.90
                     </div>
+                    <ion-icon name="checkmark-circle-sharp" class="checked"></ion-icon>
+            </button>
+    
+            <button class="selBebida" onclick="bebidaSelecionada(this)">
+                    <div class="foto">
+                        <img src="assets/sucos.jpg">
+                    </div>
+                    <div class="titulo">
+                        Suco
+                    </div>
+                    <div class="descricao">
+                        Diversos sabores
+                    </div>
+                    <div class="valor">
+                        5.90
+                    </div>
+                    <ion-icon name="checkmark-circle-sharp" class="checked"></ion-icon>
             </button>
     
             <button class="selBebida" onclick="bebidaSelecionada(this)">
@@ -116,29 +136,15 @@
                         <img src="assets/coquinha_gelada 1.png">
                     </div>
                     <div class="titulo">
-                        Coquinha 2
+                        Refrigerante
                     </div>
                     <div class="descricao">
                         Lata 350 mL
                     </div>
                     <div class="valor">
-                        4.90
+                        5.90
                     </div>
-            </button>
-    
-            <button class="selBebida" onclick="bebidaSelecionada(this)">
-                    <div class="foto">
-                        <img src="assets/coquinha_gelada 1.png">
-                    </div>
-                    <div class="titulo">
-                        Coquinha 3
-                    </div>
-                    <div class="descricao">
-                        Lata 350 mL
-                    </div>
-                    <div class="valor">
-                        4.90
-                    </div>
+                    <ion-icon name="checkmark-circle-sharp" class="checked"></ion-icon>
             </button>
         </div>
         
@@ -149,44 +155,47 @@
                         <img src="assets/pudim 1.png">
                     </div>
                     <div class="titulo">
-                        Pudim 1
+                        Pudim 
                     </div>
                     <div class="descricao">
-                        Apenas pudim
+                        Pudim comum
                     </div>
                     <div class="valor">
-                        7.90
+                        6.90
                     </div>
+                    <ion-icon name="checkmark-circle-sharp" class="checked"></ion-icon>
             </button>
     
             <button class="selSobremesa" onclick="sobremesaSelecionada(this)">
                     <div class="foto">
-                        <img src="assets/pudim 1.png">
+                        <img src="assets/brigadeiro.png">
                     </div>
                     <div class="titulo">
-                        Pudim 2
+                        Brigadeiro
                     </div>
                     <div class="descricao">
-                        Apenas pudim
+                        Outros sabores
                     </div>
                     <div class="valor">
-                        7.90
+                        4.90
                     </div>
+                    <ion-icon name="checkmark-circle-sharp" class="checked"></ion-icon>
             </button>
     
             <button class="selSobremesa" onclick="sobremesaSelecionada(this)">
                     <div class="foto">
-                        <img src="assets/pudim 1.png">
+                        <img src="assets/picole.jpg">
                     </div>
                     <div class="titulo">
-                        Pudim 3
+                        Picolé
                     </div>
                     <div class="descricao">
-                        Apenas pudim
+                        Marcas variadas
                     </div>
                     <div class="valor">
-                        7.90
+                        5.90
                     </div>
+                    <ion-icon name="checkmark-circle-sharp" class="checked"></ion-icon>
             </button> 
         </div>
 
@@ -197,5 +206,6 @@
         </button>
     </div>
     <script src="driveneats.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>

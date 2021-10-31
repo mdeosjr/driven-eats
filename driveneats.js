@@ -7,8 +7,6 @@ function pratoSelecionada(selPrato) {
 
    let sel = document.querySelector(".pratoSelecionado");
 
-   let titulo = document.querySelector(".pratoSelecionado .titulo");
-
    if (sel !== null) {
         sel.classList.remove("pratoSelecionado");
    }
@@ -23,8 +21,6 @@ function bebidaSelecionada(selBebida) {
 
     let sel = document.querySelector(".bebidaSelecionado");
 
-    let titulo = document.querySelector(".bebidaSelecionado .titulo");
-
     if (sel !== null) {
         sel.classList.remove("bebidaSelecionado");
     }
@@ -38,8 +34,6 @@ function sobremesaSelecionada(selSobremesa) {
     sobremesaSelecionado = true
 
     let sel = document.querySelector(".sobremesaSelecionado");
-
-    let titulo = document.querySelector(".sobremesaSelecionado .titulo");
 
     if (sel !== null) {
         sel.classList.remove("sobremesaSelecionado");
@@ -79,10 +73,16 @@ function confirmarPedido() {
     prato.innerHTML = document.querySelector(".pratoSelecionado .titulo").innerHTML;
     bebida.innerHTML = document.querySelector(".bebidaSelecionado .titulo").innerHTML;
     sobremesa.innerHTML = document.querySelector(".sobremesaSelecionado .titulo").innerHTML;
-    valorPrato.innerHTML = "R$ " + parseFloat(document.querySelector(".pratoSelecionado .valor").innerHTML);
-    valorBebida.innerHTML = "R$ " + parseFloat(document.querySelector(".bebidaSelecionado .valor").innerHTML);
-    valorSobremesa.innerHTML = "R$ " + parseFloat(document.querySelector(".sobremesaSelecionado .valor").innerHTML);
+    valorPrato.innerHTML = "R$ " + parseFloat(document.querySelector(".pratoSelecionado .valor").innerHTML).toFixed(2);
+    valorBebida.innerHTML = "R$ " + parseFloat(document.querySelector(".bebidaSelecionado .valor").innerHTML).toFixed(2);
+    valorSobremesa.innerHTML = "R$ " + parseFloat(document.querySelector(".sobremesaSelecionado .valor").innerHTML).toFixed(2);
     valorTotal.innerHTML = "R$ " + resultado.toFixed(2)
+}
+
+function cancelarPedido() {
+    let cancelar = document.querySelector(".confirmarPedido")
+
+    cancelar.classList.add("escondido")
 }
 
 function enviarPedido() {
@@ -92,10 +92,13 @@ function enviarPedido() {
     let pratoE = document.querySelector(".pratoSelecionado .titulo").innerHTML
     let bebidaE = document.querySelector(".bebidaSelecionado .titulo").innerHTML
     let sobremesaE = document.querySelector(".sobremesaSelecionado .titulo").innerHTML
+    let valorTotal = parseFloat(document.querySelector(".pratoSelecionado .valor").innerHTML) + parseFloat(document.querySelector(".bebidaSelecionado .valor").innerHTML) + parseFloat(document.querySelector(".sobremesaSelecionado .valor").innerHTML)
+    valorTotal = "R$ " + valorTotal.toFixed(2)
 
     let mensagem;
     mensagem =
-    `Olá, gostaria de fazer o pedido: - Prato:  ${pratoE}  - Bebida:  ${bebidaE}  - Sobremesa: ${sobremesaE}  ${nome}  ${endereco}`;
+    `Olá, gostaria de fazer o pedido: - Prato:  ${pratoE}  - Bebida:  ${bebidaE}  - Sobremesa: ${sobremesaE} - Valor Total: ${valorTotal}  ${nome}  ${endereco}`;
 
-    window.open("https://wa.me/+5511999999999" + encodeURIComponent(mensagem));
+    window.open("https://wa.me/+5511999999999?text=" + encodeURIComponent(mensagem));
+    //abre pop-up que pode ser bloqueado
 }
