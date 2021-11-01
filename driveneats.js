@@ -97,7 +97,7 @@ function enviarPedido() {
 
     let mensagem;
     mensagem =
-    `Olá, gostaria de fazer o pedido: - Prato:  ${pratoE}  - Bebida:  ${bebidaE}  - Sobremesa: ${sobremesaE} - Valor Total: ${valorTotal}  ${nome}  ${endereco}`;
+    `Olá, gostaria de fazer o pedido: - Prato:  ${pratoE}  - Bebida:  ${bebidaE}  - Sobremesa: ${sobremesaE} - Valor Total: ${valorTotal} - Nome: ${nome}  Endereço: ${endereco}`;
 
     window.open("https://wa.me/+5511999999999?text=" + encodeURIComponent(mensagem));
     //abre pop-up que pode ser bloqueado
